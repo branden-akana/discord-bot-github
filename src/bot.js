@@ -19,8 +19,8 @@ class DiscordBotGithub {
   }
 
   start() {
-    this.client.login(this.email, this.password, (error) => {
-      if (error) return out.error('[Login]' + error);
+    this.client.loginWithToken(this.email, "", "", (error) => {
+      if (error) return out.error('[Login] ' + error);
     });
   }
 
